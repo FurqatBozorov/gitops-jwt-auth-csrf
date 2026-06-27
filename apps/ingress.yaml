@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: myapp.local
+      http:
+        paths:
+          - path: /api(/|$)(.*)
+            pathType: ImplementedSpecific
+            backend:
+              service:
+                name: express-backend-service
+                port:
+                  number: 4000
+          - path: /(.*)
+            pathType: ImplementedSpecific
+            backend:
+              service:
+                name: react-app-service
+                port:
+                  number: 80
