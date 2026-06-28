@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: react-app
-          image: furqatb/react-jwt-auth-csrf:develop-b3637b9
+          image: furqatb/react-jwt-auth-csrf:develop-95e1e16
           ports:
             - containerPort: 80
