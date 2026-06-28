@@ -10,7 +10,7 @@ spec:
     - host: myapp.local
       http:
         paths:
-          - path: /(/|$)(.*)
+          - path: /api(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
               service:
