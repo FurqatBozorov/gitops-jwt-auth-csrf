@@ -11,14 +11,14 @@ spec:
       http:
         paths:
           - path: /api(/|$)(.*)
-            pathType: ImplementedSpecific
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: express-backend-service
                 port:
                   number: 4000
           - path: /(.*)
-            pathType: ImplementedSpecific
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: react-app-service

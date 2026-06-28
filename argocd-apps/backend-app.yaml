@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/FurqatBozorov/gitops-jwt-auth-csrf.git
-    targetRevision: main
+    targetRevision: master
     path: apps/backend
   destination:
     server: https://kubernetes.default.svc
