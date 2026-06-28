@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: express-backend
-          image: furqatb/express-jwt-auth-csrf:develop-ea7f32f
+          image: furqatb/express-jwt-auth-csrf:develop-32ba8bc
           ports:
             - containerPort: 4000
           envFrom:
